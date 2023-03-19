@@ -10,6 +10,7 @@ header {
     background-size: cover;
     color: #FFFFFF;
     padding: 200px 0;
+    max-width: 1500px;
 }
 header h3 {
     font-weight: 900;
@@ -37,4 +38,30 @@ header a {
     line-height: 21px;
     letter-spacing: 3px;
     text-transform: uppercase;
+}
+header a:hover {
+    color: #FFFFFF;
+    background-color: #272044;
+    transition: all 200ms ease-in-out;
+}
+@media (max-width: 850px) {
+    header {
+        padding: 40px 0;
+    }
+    header h3 {
+        font-size: 12px;
+    }
+    header h1 {
+        font-size: 36px;
+        line-height: 78px;
+    }
+    header h2 {
+        font-size: 15px;
+        line-height: 30px;
+        margin-bottom: 20px;
+    }
+    header a {
+    padding: 8px 16px;
+    font-size: 12px;
+}
 }
