@@ -4,7 +4,7 @@
 }
 header {
     text-align: center;
-    background-image: linear-gradient(rgba(255,255,255,0.05), rgba(255,255,255,0.05)), url(/images/header.jpg);
+    background-image: linear-gradient(rgba(255,255,255,0.09), rgba(255,255,255,0.09)), url(/images/header.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -43,6 +43,36 @@ header a:hover {
     color: #FFFFFF;
     background-color: #272044;
     transition: all 200ms ease-in-out;
+}
+footer {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1500px;
+    background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(/images/footer.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: #FFFFFF;
+    padding: 40px 0;
+}
+footer h3 {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    height: 30px;
+}
+footer ul {
+    padding: 0;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+}
+li {
+    list-style: none;
+}
+li a {
+    text-decoration: none;
+    color: white;
 }
 @media (max-width: 850px) {
     header {
