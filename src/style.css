@@ -51,7 +51,8 @@ main section.brno-cafes div.cards figure figcaption a:hover {
 main section {
     padding: 100px 170px;
 }
-main section.brno-history {
+main section.brno-history,
+main section.brno-photos {
     background-color: rgb(25, 25, 34);
     color: white;
 }
@@ -88,7 +89,8 @@ main section.brno-cafes {
     color: white;
     padding: 100px 140px;
 }
-main section.brno-cafes h3{
+main section.brno-cafes h3,
+main section.brno-photos h3{
     opacity: 0.5;
     letter-spacing: 5px;
     text-transform: uppercase;
@@ -146,6 +148,23 @@ main section.brno-cafes div.cards figure figcaption a {
     width: 100%;
     aspect-ratio: 1 / 1;
 }
+section.brno-photos {
+    text-align: center;
+}
+section.brno-photos h2{
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 72px;
+}
+div.photos {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    margin: 0 auto;
+}
+div.photos img{
+    width: 370px;
+}
 footer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -178,13 +197,22 @@ li a {
     text-decoration: none;
     color: white;
 }
-@media (max-width: 1000px) {
+@media (max-width: 1024px) {
     header {
         padding: 40px 0;
     }
+    header a {
+        padding: 8px 16px;
+        font-size: 12px;
+        width:50%;
+        white-space: nowrap;
+        display: block;
+        margin: 0 auto;
+    }
     header h3,
     main section.brno-history figure figcaption h3,
-    main section.brno-history figure figcaption p {
+    main section.brno-history figure figcaption p,
+    main section.brno-photos h3 {
         font-size: 12px;
     }
     header h1 {
@@ -197,10 +225,6 @@ li a {
         line-height: 30px;
         margin-bottom: 20px;
     }
-    header a {
-        padding: 8px 16px;
-        font-size: 12px;
-    }
     main section.brno-history {
         padding: 10px;
         text-align: center;        
@@ -211,22 +235,36 @@ li a {
     main section.brno-history img {
         display: none;
     }
-    main section.brno-cafes {
+    main section.brno-cafes,
+    section.brno-photos {
         padding: 10px 30px;
     }
     main section.brno-cafes div.cards {
-    margin-top: 20px;
-    grid-template-columns: 1fr;
-    grid-gap: 50px;
-    text-align: start;
-}
+        margin-top: 20px;
+        grid-template-columns: 1fr;
+        grid-gap: 50px;
+        text-align: start;
+    }
+    main section.brno-photos h2 {
+        font-size: 16px;
+    }
+    div.photos {
+        grid-template-columns: 1fr;
+        grid-gap: 5px
+    }
+    div.photos img{
+        width: 250px;
+    }
     footer {
         padding: 10px 0;
+        grid-template-columns: 1fr;
+        grid-gap: 5px;
+        text-align: center;
     }
-    footer h3 {
+    footer section h3 {
         font-size: 15px;
-        line-height: 15px;
-        margin-bottom: 5px;
+        margin-bottom: 0;
+        text-transform: uppercase;
     }
     footer h3, footer ul, footer p {
         font-size: 10px;
