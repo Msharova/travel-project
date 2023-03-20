@@ -86,6 +86,7 @@ main section.brno-cafes {
     text-align: center;
     background-color: rgb(34, 34, 48);
     color: white;
+    padding: 100px 140px;
 }
 main section.brno-cafes h3{
     opacity: 0.5;
@@ -107,6 +108,7 @@ main section.brno-cafes div.cards figure{
 }
 main section.brno-cafes div.cards figure img{
     width: 185px;
+    width: 100%;
     height: auto;
 }
 main section.brno-cafes div.cards figure figcaption{
@@ -135,6 +137,14 @@ main section.brno-cafes div.cards figure figcaption a {
     margin: 20px auto 0;
     text-align: center;
     width: 80%;
+}
+.card-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.embed {
+    width: 100%;
+    aspect-ratio: 1 / 1;
 }
 footer {
     display: grid;
