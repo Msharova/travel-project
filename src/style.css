@@ -1,6 +1,7 @@
 * {
     margin: 0 auto;
     font-family: 'Poppins', sans-serif;
+    max-width: 1500px;
 }
 header {
     text-align: center;
@@ -10,7 +11,6 @@ header {
     background-size: cover;
     color: #FFFFFF;
     padding: 200px 0;
-    max-width: 1500px;
 }
 header h3 {
     font-weight: 900;
@@ -33,7 +33,7 @@ header a {
     background-color: #FFFFFF;
     padding: 16px 32px;
     text-decoration:  none;
-    color: #272044;
+    color: rgb(25, 25, 34);
     font-weight: 700;
     line-height: 21px;
     letter-spacing: 3px;
@@ -41,13 +41,47 @@ header a {
 }
 header a:hover {
     color: #FFFFFF;
-    background-color: #272044;
+    background-color: rgb(25, 25, 34);
     transition: all 200ms ease-in-out;
 }
+main section {
+    padding: 100px 170px;
+}
+main section.brno-history {
+    background-color: rgb(25, 25, 34);
+    color: white;
+}
+main section.brno-history figure {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 50px;
+}
+main section.brno-history figure figcaption h3 {
+    line-height: 21px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 16px;
+    opacity: 0.6;
+}
+main section.brno-history figure figcaption h2 {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 60px;
+}
+main section.brno-history figure figcaption p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    opacity: 0.6;
+}
+main section.brno-history img {
+    width: 570px;
+}
 footer {
-    display: flex;
-    justify-content: space-between;
-    max-width: 1500px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
     background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(/images/footer.jpg);
     background-repeat: no-repeat;
     background-position: center;
@@ -76,37 +110,52 @@ li a {
     text-decoration: none;
     color: white;
 }
-@media (max-width: 850px) {
+@media (max-width: 1000px) {
     header {
         padding: 40px 0;
     }
-    header h3 {
+    header h3,
+    main section.brno-history figure figcaption h3,
+    main section.brno-history figure figcaption p {
         font-size: 12px;
     }
     header h1 {
         font-size: 36px;
         line-height: 78px;
     }
-    header h2 {
+    header h2,
+    main section.brno-history figure figcaption h2 {
         font-size: 15px;
         line-height: 30px;
         margin-bottom: 20px;
     }
     header a {
-    padding: 8px 16px;
-    font-size: 12px;
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+    main section.brno-history {
+        padding: 10px;
+        text-align: center;        
+    }
+    main section.brno-history figure {
+        grid-template-columns: 1fr;
+    }
+    main section.brno-history img {
+        display: none;
     }
     footer {
         padding: 10px 0;
-        flex-direction: column;
-        text-align: center;
     }
     footer h3 {
         font-size: 15px;
+        line-height: 15px;
         margin-bottom: 5px;
     }
     footer h3, footer ul, footer p {
         font-size: 10px;
+    }
+    footer ul {
+        line-height: 15px;
     }
     footer li {
         margin-bottom: 0;
