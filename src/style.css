@@ -218,7 +218,9 @@ li a {
     header h3,
     main section.brno-history figure figcaption h3,
     main section.brno-history figure figcaption p,
-    main section.brno-photos h3 {
+    main section.brno-cafes h3,
+    main section.brno-photos h3,
+    main section.brno-cafes div.cards figure figcaption p {
         font-size: 12px;
     }
     header h1 {
@@ -226,10 +228,13 @@ li a {
         line-height: 78px;
     }
     header h2,
-    main section.brno-history figure figcaption h2 {
+    main section.brno-history figure figcaption h2, 
+    main section.brno-cafes h2,
+    main section.brno-cafes div.cards figure figcaption h4,
+    main section.brno-photos h2 {
         font-size: 15px;
         line-height: 30px;
-        margin-bottom: 20px;
+        margin: 10px auto;
     }
     main section.brno-history {
         padding: 10px;
@@ -250,9 +255,6 @@ li a {
         grid-template-columns: 1fr;
         grid-gap: 50px;
         text-align: start;
-    }
-    main section.brno-photos h2 {
-        font-size: 16px;
     }
     div.photos {
         grid-template-columns: 1fr;
@@ -281,4 +283,13 @@ li a {
     footer li {
         margin-bottom: 0;
     }
+}
+@media (min-width: 768px) and (max-width: 1326px) {
+    div.photos {
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 5px
+    }
+    div.photos img{
+        width: 300px;
+    }	
 }
